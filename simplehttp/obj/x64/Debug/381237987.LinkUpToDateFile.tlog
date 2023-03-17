@@ -1,0 +1,1 @@
+g++ -o "/root/projects/simplehttp/bin/x64/Debug/simplehttp.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/simplehttp/obj/x64/Debug/main.o /root/projects/simplehttp/obj/x64/Debug/myEvent.o /root/projects/simplehttp/obj/x64/Debug/Server.o /root/projects/simplehttp/obj/x64/Debug/threadpool.o -lpthread

@@ -1,0 +1,293 @@
+﻿生成启动时间为 2023/3/15 16:27:25。
+日志记录详细程度设置为: Normal。     1>项目“D:\VS\Project\Simpleserver\simplehttp\simplehttp.vcxproj”在节点 2 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“D:\VS\Project\Simpleserver\simplehttp\obj\x64\Debug\simplehttp.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       _ValidateSources:
+         正在验证源
+       _CopySources:
+         正在将源远程复制到“81.68.202.17”
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\main.c”，因为它已是最新版本。
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\myEvent.c”，因为它已是最新版本。
+         正在将文件“D:\VS\Project\Simpleserver\simplehttp\Server.c”复制到“/root/projects/simplehttp/Server.c”
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\threadpool.c”，因为它已是最新版本。
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\myEvent.h”，因为它已是最新版本。
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\Server.h”，因为它已是最新版本。
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\threadpool.h”，因为它已是最新版本。
+       _ValidateCompatibleRemoteArchitectures:
+         正在验证体系结构
+       _ValidateValidArchitecture:
+         正在验证体系结构
+         当前项目体系结构“x64”兼容远程系统体系结构“x64”(“x64”)。
+       ClCompile:
+         正在启动远程生成
+         正在编译源:
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\main.c”，因为它已是最新版本。
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\myEvent.c”，因为它已是最新版本。
+         正在调用“g++”
+         g++ -c -x c /root/projects/simplehttp/Server.c -g2 -gdwarf-2 -o "/root/projects/simplehttp/obj/x64/Debug/Server.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-pointer-sign" -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fexceptions -std=gnu11
+         Server.c
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(1,9): warning : #pragma once in main file [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(1,9): warning :  #pragma once
+D:\VS\Project\Simpleserver\simplehttp\Server.c(1,9): warning :          ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(47,3): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(47,3): warning :    eventset(&ep_events[i], cfd, info->epfd, recvHttpRequest, &ep_events[i]);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(47,3): warning :    ^
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message : expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :  void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(48,3): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(48,3): warning :    eventadd(info->epfd, EPOLLIN | EPOLLET, &ep_events[i]);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(48,3): warning :    ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(151,2): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(151,2): warning :   eventset(info, info->m_fd, info->epfd, recvHttpRequest, info);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(151,2): warning :   ^
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message : expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :  void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(152,2): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(152,2): warning :   eventadd(info->epfd, EPOLLIN | EPOLLET, info);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(152,2): warning :   ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(163,33): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(163,33): warning :     *to = HexToDec(from[1]) * 16 + HexToDec(from[2]);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(163,33): warning :                                  ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(227,4): warning : passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(227,4): warning :     -1, "404.html");
+D:\VS\Project\Simpleserver\simplehttp\Server.c(227,4): warning :     ^
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message : expected ‘char *’ but argument is of type ‘const char *’
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message :  void eventset1(my_events* my_ev, int fd, int epfd, void (*call_back)(void* arg),
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(243,4): warning : passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(243,4): warning :     -1, file);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(243,4): warning :     ^
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message : expected ‘char *’ but argument is of type ‘const char *’
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message :  void eventset1(my_events* my_ev, int fd, int epfd, void (*call_back)(void* arg),
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(256,4): warning : passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(256,4): warning :     st.st_size,file);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(256,4): warning :     ^
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message : expected ‘char *’ but argument is of type ‘const char *’
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message :  void eventset1(my_events* my_ev, int fd, int epfd, void (*call_back)(void* arg),
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(43,6): message :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(256,6): warning : conversion to ‘int’ from ‘__off_t’ may alter its value [-Wconversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(256,6): warning :     st.st_size,file);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(256,6): warning :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(286,48): warning : conversion to ‘size_t’ from ‘off_t’ may change the sign of the result [-Wsign-conversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(286,48): warning :    ret = sendfile(info->m_fd, fd, &offset, size - offset);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(286,48): warning :                                                 ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(286,17): warning : conversion to ‘int’ from ‘ssize_t’ may alter its value [-Wconversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(286,17): warning :    ret = sendfile(info->m_fd, fd, &offset, size - offset);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(286,17): warning :                  ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(297,2): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(297,2): warning :   eventset(info, info->m_fd, info->epfd, recvHttpRequest, info);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(297,2): warning :   ^
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message : expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :  void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(298,2): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(298,2): warning :   eventadd(info->epfd, EPOLLIN | EPOLLET, info);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(298,2): warning :   ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(377,3): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(377,3): warning :    eventset(&ep_events[MAX_EVENTS - 1], fd,epfd, acceptClient, &ep_events[MAX_EVENTS-1]);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(377,3): warning :    ^
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message : expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :  void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+       D:\VS\Project\Simpleserver\simplehttp\myEvent.h(37,6): message :       ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(378,3): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(378,3): warning :    eventadd(epfd, EPOLLIN|EPOLLET, &ep_events[MAX_EVENTS - 1]);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(378,3): warning :    ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(412,21): warning : conversion to ‘int’ from ‘ssize_t’ may alter its value [-Wconversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(412,21): warning :    while ((len = recv(info->m_fd, tmp, sizeof tmp, 0)) > 0)
+D:\VS\Project\Simpleserver\simplehttp\Server.c(412,21): warning :                      ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(416,5): warning : conversion to ‘size_t’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(416,5): warning :      memcpy(info->m_buf, tmp, len);
+D:\VS\Project\Simpleserver\simplehttp\Server.c(416,5): warning :      ^
+     1>D:\VS\Project\Simpleserver\simplehttp\Server.c(425,20): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+D:\VS\Project\Simpleserver\simplehttp\Server.c(425,20): warning :     int reqLen = pt - info->m_buf;
+D:\VS\Project\Simpleserver\simplehttp\Server.c(425,20): warning :                     ^
+         已完成编译“/root/projects/simplehttp/Server.c”
+         正在跳过“D:\VS\Project\Simpleserver\simplehttp\threadpool.c”，因为它已是最新版本。
+         /root/projects/simplehttp/Server.c:1:9: warning: #pragma once in main file [enabled by default]
+          #pragma once
+                  ^
+         /root/projects/simplehttp/Server.c: In function ‘acceptClient’:
+         /root/projects/simplehttp/Server.c:47:3: warning: passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+            eventset(&ep_events[i], cfd, info->epfd, recvHttpRequest, &ep_events[i]);
+            ^
+         In file included from /root/projects/simplehttp/threadpool.h:7:0,
+                          from /root/projects/simplehttp/Server.h:18,
+                          from /root/projects/simplehttp/Server.c:2:
+         /root/projects/simplehttp/myEvent.h:37:6: note: expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+          void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+               ^
+         /root/projects/simplehttp/Server.c:48:3: warning: conversion of unsigned constant value to negative integer [-Wsign-conversion]
+            eventadd(info->epfd, EPOLLIN | EPOLLET, &ep_events[i]);
+            ^
+         /root/projects/simplehttp/Server.c: In function ‘sendDir’:
+         /root/projects/simplehttp/Server.c:151:2: warning: passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+           eventset(info, info->m_fd, info->epfd, recvHttpRequest, info);
+           ^
+         In file included from /root/projects/simplehttp/threadpool.h:7:0,
+                          from /root/projects/simplehttp/Server.h:18,
+                          from /root/projects/simplehttp/Server.c:2:
+         /root/projects/simplehttp/myEvent.h:37:6: note: expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+          void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+               ^
+         /root/projects/simplehttp/Server.c:152:2: warning: conversion of unsigned constant value to negative integer [-Wsign-conversion]
+           eventadd(info->epfd, EPOLLIN | EPOLLET, info);
+           ^
+         /root/projects/simplehttp/Server.c: In function ‘decodeMsg’:
+         /root/projects/simplehttp/Server.c:163:33: warning: conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+             *to = HexToDec(from[1]) * 16 + HexToDec(from[2]);
+                                          ^
+         /root/projects/simplehttp/Server.c: In function ‘parseRequestLine’:
+         /root/projects/simplehttp/Server.c:227:4: warning: passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+             -1, "404.html");
+             ^
+         In file included from /root/projects/simplehttp/threadpool.h:7:0,
+                          from /root/projects/simplehttp/Server.h:18,
+                          from /root/projects/simplehttp/Server.c:2:
+         /root/projects/simplehttp/myEvent.h:43:6: note: expected ‘char *’ but argument is of type ‘const char *’
+          void eventset1(my_events* my_ev, int fd, int epfd, void (*call_back)(void* arg),
+               ^
+         /root/projects/simplehttp/Server.c:243:4: warning: passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+             -1, file);
+             ^
+         In file included from /root/projects/simplehttp/threadpool.h:7:0,
+                          from /root/projects/simplehttp/Server.h:18,
+                          from /root/projects/simplehttp/Server.c:2:
+         /root/projects/simplehttp/myEvent.h:43:6: note: expected ‘char *’ but argument is of type ‘const char *’
+          void eventset1(my_events* my_ev, int fd, int epfd, void (*call_back)(void* arg),
+               ^
+         /root/projects/simplehttp/Server.c:256:4: warning: passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+             st.st_size,file);
+             ^
+         In file included from /root/projects/simplehttp/threadpool.h:7:0,
+                          from /root/projects/simplehttp/Server.h:18,
+                          from /root/projects/simplehttp/Server.c:2:
+         /root/projects/simplehttp/myEvent.h:43:6: note: expected ‘char *’ but argument is of type ‘const char *’
+          void eventset1(my_events* my_ev, int fd, int epfd, void (*call_back)(void* arg),
+               ^
+         /root/projects/simplehttp/Server.c:256:6: warning: conversion to ‘int’ from ‘__off_t’ may alter its value [-Wconversion]
+             st.st_size,file);
+               ^
+         /root/projects/simplehttp/Server.c: In function ‘sendFile’:
+         /root/projects/simplehttp/Server.c:286:48: warning: conversion to ‘size_t’ from ‘off_t’ may change the sign of the result [-Wsign-conversion]
+            ret = sendfile(info->m_fd, fd, &offset, size - offset);
+                                                         ^
+         /root/projects/simplehttp/Server.c:286:17: warning: conversion to ‘int’ from ‘ssize_t’ may alter its value [-Wconversion]
+            ret = sendfile(info->m_fd, fd, &offset, size - offset);
+                          ^
+         /root/projects/simplehttp/Server.c:297:2: warning: passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+           eventset(info, info->m_fd, info->epfd, recvHttpRequest, info);
+           ^
+         In file included from /root/projects/simplehttp/threadpool.h:7:0,
+                          from /root/projects/simplehttp/Server.h:18,
+                          from /root/projects/simplehttp/Server.c:2:
+         /root/projects/simplehttp/myEvent.h:37:6: note: expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+          void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+               ^
+         /root/projects/simplehttp/Server.c:298:2: warning: conversion of unsigned constant value to negative integer [-Wsign-conversion]
+           eventadd(info->epfd, EPOLLIN | EPOLLET, info);
+           ^
+         /root/projects/simplehttp/Server.c: In function ‘InitCon’:
+         /root/projects/simplehttp/Server.c:377:3: warning: passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+            eventset(&ep_events[MAX_EVENTS - 1], fd,epfd, acceptClient, &ep_events[MAX_EVENTS-1]);
+            ^
+         In file included from /root/projects/simplehttp/threadpool.h:7:0,
+                          from /root/projects/simplehttp/Server.h:18,
+                          from /root/projects/simplehttp/Server.c:2:
+         /root/projects/simplehttp/myEvent.h:37:6: note: expected ‘void (*)(int,  int,  void *)’ but argument is of type ‘void (*)(void *)’
+          void eventset(my_events* my_ev, int fd,int epfd, void (*call_back)(int fd, int event, void* arg), void* event_arg);
+               ^
+         /root/projects/simplehttp/Server.c:378:3: warning: conversion of unsigned constant value to negative integer [-Wsign-conversion]
+            eventadd(epfd, EPOLLIN|EPOLLET, &ep_events[MAX_EVENTS - 1]);
+            ^
+         /root/projects/simplehttp/Server.c: In function ‘recvHttpRequest’:
+         /root/projects/simplehttp/Server.c:412:21: warning: conversion to ‘int’ from ‘ssize_t’ may alter its value [-Wconversion]
+            while ((len = recv(info->m_fd, tmp, sizeof tmp, 0)) > 0)
+                              ^
+         /root/projects/simplehttp/Server.c:416:5: warning: conversion to ‘size_t’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+              memcpy(info->m_buf, tmp, len);
+              ^
+         /root/projects/simplehttp/Server.c:425:20: warning: conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+             int reqLen = pt - info->m_buf;
+                             ^
+         
+       Link:
+         正在链接对象
+         正在调用“ld”
+         g++ -o "/root/projects/simplehttp/bin/x64/Debug/simplehttp.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/simplehttp/obj/x64/Debug/main.o /root/projects/simplehttp/obj/x64/Debug/myEvent.o /root/projects/simplehttp/obj/x64/Debug/Server.o /root/projects/simplehttp/obj/x64/Debug/threadpool.o -lpthread
+         已完成链接，输出文件名:“/root/projects/simplehttp/bin/x64/Debug/simplehttp.out”
+         正在将文件“/root/projects/simplehttp/bin/x64/Debug/simplehttp.out”复制到“D:\VS\Project\Simpleserver\simplehttp\bin\x64\Debug\simplehttp.out”
+         simplehttp.vcxproj -> D:\VS\Project\Simpleserver\simplehttp\bin\x64\Debug\simplehttp.out
+       FinalizeBuildStatus:
+         正在删除文件“D:\VS\Project\Simpleserver\simplehttp\obj\x64\Debug\simplehttp.tlog\unsuccessfulbuild”。
+         正在对“D:\VS\Project\Simpleserver\simplehttp\obj\x64\Debug\simplehttp.tlog\simplehttp.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\VS\Project\Simpleserver\simplehttp\simplehttp.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+       “D:\VS\Project\Simpleserver\simplehttp\simplehttp.vcxproj”(Build 目标) (1) ->
+       (ClCompile 目标) -> 
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(1,9): warning : #pragma once in main file [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(1,9): warning :  #pragma once
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(1,9): warning :          ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(47,3): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(47,3): warning :    eventset(&ep_events[i], cfd, info->epfd, recvHttpRequest, &ep_events[i]);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(47,3): warning :    ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(48,3): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(48,3): warning :    eventadd(info->epfd, EPOLLIN | EPOLLET, &ep_events[i]);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(48,3): warning :    ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(151,2): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(151,2): warning :   eventset(info, info->m_fd, info->epfd, recvHttpRequest, info);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(151,2): warning :   ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(152,2): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(152,2): warning :   eventadd(info->epfd, EPOLLIN | EPOLLET, info);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(152,2): warning :   ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(163,33): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(163,33): warning :     *to = HexToDec(from[1]) * 16 + HexToDec(from[2]);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(163,33): warning :                                  ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(227,4): warning : passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(227,4): warning :     -1, "404.html");
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(227,4): warning :     ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(243,4): warning : passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(243,4): warning :     -1, file);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(243,4): warning :     ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(256,4): warning : passing argument 8 of ‘eventset1’ discards ‘const’ qualifier from pointer target type [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(256,4): warning :     st.st_size,file);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(256,4): warning :     ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(256,6): warning : conversion to ‘int’ from ‘__off_t’ may alter its value [-Wconversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(256,6): warning :     st.st_size,file);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(256,6): warning :       ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(286,48): warning : conversion to ‘size_t’ from ‘off_t’ may change the sign of the result [-Wsign-conversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(286,48): warning :    ret = sendfile(info->m_fd, fd, &offset, size - offset);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(286,48): warning :                                                 ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(286,17): warning : conversion to ‘int’ from ‘ssize_t’ may alter its value [-Wconversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(286,17): warning :    ret = sendfile(info->m_fd, fd, &offset, size - offset);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(286,17): warning :                  ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(297,2): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(297,2): warning :   eventset(info, info->m_fd, info->epfd, recvHttpRequest, info);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(297,2): warning :   ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(298,2): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(298,2): warning :   eventadd(info->epfd, EPOLLIN | EPOLLET, info);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(298,2): warning :   ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(377,3): warning : passing argument 4 of ‘eventset’ from incompatible pointer type [enabled by default]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(377,3): warning :    eventset(&ep_events[MAX_EVENTS - 1], fd,epfd, acceptClient, &ep_events[MAX_EVENTS-1]);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(377,3): warning :    ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(378,3): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(378,3): warning :    eventadd(epfd, EPOLLIN|EPOLLET, &ep_events[MAX_EVENTS - 1]);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(378,3): warning :    ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(412,21): warning : conversion to ‘int’ from ‘ssize_t’ may alter its value [-Wconversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(412,21): warning :    while ((len = recv(info->m_fd, tmp, sizeof tmp, 0)) > 0)
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(412,21): warning :                      ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(416,5): warning : conversion to ‘size_t’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(416,5): warning :      memcpy(info->m_buf, tmp, len);
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(416,5): warning :      ^
+         D:\VS\Project\Simpleserver\simplehttp\Server.c(425,20): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(425,20): warning :     int reqLen = pt - info->m_buf;
+       D:\VS\Project\Simpleserver\simplehttp\Server.c(425,20): warning :                     ^
+
+    19 个警告
+    0 个错误
+
+已用时间 00:00:06.33
